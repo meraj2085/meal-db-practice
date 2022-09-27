@@ -1,0 +1,19 @@
+.nav-container{
+     display: flex;
+     justify-content: space-between;
+     background-color: rgba(28, 43, 53, 1);
+     align-items: center;
+     padding: 0 50px;
+}
+.nav-title{
+     color: white;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.nav-container a{
+     color: white;
+     text-decoration: none;
+     margin-left: 50px;
+}
+.nav-container a:hover{
+     color: orange;
+}

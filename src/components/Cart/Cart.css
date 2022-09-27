@@ -1,0 +1,22 @@
+.cart-container{
+     position: sticky;
+     top: 0;
+}
+.cart-header{
+     font-family: 'Lato';
+     font-style: normal;
+     font-weight: 400;
+     font-size: 25px;
+     line-height: 30px;
+     color: #1C2B35;
+     display: flex;
+     justify-content: center;
+     padding-top: 20px;
+     font-weight: 500;
+}
+.selected-products-list{
+     margin-left: 20px;
+}
+.selected-products-list li{
+     margin-top: 10px;
+}
