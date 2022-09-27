@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import Meal from '../Meal/Meal';
 import './Meals.css'
-const Meals = () => {
-     const [meals, setMeals] = useState([]);
-     useEffect(()=>{
-          fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=a')
-          .then(res => res.json())
-          .then(data => setMeals(data.meals))
-     },[])
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+const Meals = ({handleAddToCard, meal}) => {
+     const {strMeal, strInstructions, strMealThumb} = meal;
      return (
-          <div className='meals-container'>
-               {
-                    meals.map(meal => <Meal meal={meal} key={meal.idMeal}></Meal>)
-               }
+          <div>
+               <div className='meal-card'>
+               <img src={strMealThumb} alt="" />
+               <div className='meal-details'>
+                    <h6>{strMeal}</h6>
+                    <p>{strInstructions.slice(0,125)}</p>
+               </div>
+               <button onClick={()=>{handleAddToCard(meal)}} className='cart-btn-container'>
+                    <p className='cart-btn'>Add To Cart <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></p>
+               </button>
+          </div>
           </div>
      );
 };

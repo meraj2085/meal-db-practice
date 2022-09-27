@@ -5,3 +5,9 @@
 .selected-products{
      background: rgba(255, 153, 0, 0.3);
 }
+.meals-container{
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 50px;
+     margin: 30px 50px 50px 70px ;
+}

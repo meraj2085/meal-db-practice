@@ -14,7 +14,7 @@
      padding-top: 20px;
      font-weight: 500;
 }
-.selected-products-list{
+.selected-products-list, .selected-total{
      margin-left: 20px;
 }
 .selected-products-list li{
